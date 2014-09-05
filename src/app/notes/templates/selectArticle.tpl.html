@@ -1,0 +1,10 @@
+<ul ng-repeat="subject in subjects">
+    <li class="list">
+        <h3>{{subject.name}}</h3>
+        <div class="row">
+                <div ng-repeat="note in subject.notes" class="col-sm-4">
+                    <button class="btn btn-default btn-block" ui-sref="notes.view" ng-click="$root.selected.subject=subject;$root.selected.note = note">{{note.title}}</button>
+                </div>
+        </div>
+    </li>
+</ul>
